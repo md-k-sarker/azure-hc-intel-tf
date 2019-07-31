@@ -8,10 +8,10 @@ source /mnt/shared/setenv
 
 INSTALL_PREFIX=/opt
 
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh -b -p ${INSTALL_PREFIX}/miniconda3
+wget https://repo.continuum.io/miniconda/Miniconda3-4.3.31-Linux-x86_64.sh
+bash Miniconda3-4.3.31-Linux-x86_64.sh -b -p ${INSTALL_PREFIX}/miniconda3
 
-rm -rf Miniconda3-latest-Linux-x86_64.sh
+rm -rf Miniconda3-4.3.31-Linux-x86_64.sh
 
 conda_path="export PATH=${INSTALL_PREFIX}/miniconda3/bin:$PATH"
 #set env on /mnt/shared/ which can be used when launched after VM is generalized
