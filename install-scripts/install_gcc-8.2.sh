@@ -24,17 +24,17 @@ cd mpc-1.0.3
 cd ..
 
 # install gcc 8.2
-wget https://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.gz
-tar -xvf gcc-8.2.0.tar.gz
-cd gcc-8.2.0
-./configure --disable-multilib --prefix=/opt/gcc-8.2.0 && make -j 40 && make install
+wget https://ftp.gnu.org/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.gz
+tar -xvf gcc-6.2.0.tar.gz
+cd gcc-6.2.0
+./configure --disable-multilib --prefix=/opt/gcc-6.2.0 && make -j 40 && make install
 
 cd && rm -rf /tmp/setup-gcc
 
-gcc_path="export PATH=/opt/gcc-8.2.0/bin:$PATH
-export LD_LIBRARY_PATH=/opt/gcc-8.2.0/lib64:$LD_LIBRARY_PATH
-export CC=/opt/gcc-8.2.0/bin/gcc
-export GCC=/opt/gcc-8.2.0/bin/gcc"
+gcc_path="export PATH=/opt/gcc-6.2.0/bin:$PATH
+export LD_LIBRARY_PATH=/opt/gcc-6.2.0/lib64:$LD_LIBRARY_PATH
+export CC=/opt/gcc-6.2.0/bin/gcc
+export GCC=/opt/gcc-6.2.0/bin/gcc"
 
 #set env on /mnt/shared/ which can be used when launched after VM is generalized
 echo -e "$gcc_path" >> /mnt/shared/setenv
